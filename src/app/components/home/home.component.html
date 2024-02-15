@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="custom-form">
+                    <h1 class="customh1">Todo app</h1>
+                    <form (ngSubmit)="addTodoValue()" class="mb-3 ">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input  type="text" class="form-control mb-4 mt-1" name="text" placeholder="Enter the text" id="title" [(ngModel)]="myTodo.title">
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Level</label>
+                            <select class="form-control mt-1 " name="Priority" [(ngModel)]="myTodo.priority">
+                                <option value="high">High</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn  mt-4 custombtn">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mb-5" *ngIf="listTodo.length>0">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center customlisttitle">
+                <div class="col">
+                    <h5 class="mb-0">Title</h5>
+                </div>
+                <div class="col">
+                    <h5 class="mb-0">Priority</h5>
+                </div>
+                <div class="col">
+                    <h5 class="mb-0">Status</h5>
+                </div>
+                 <div class="col">
+                    <h5 class="mb-0">Delete</h5>
+                </div>
+            </li>
+            <li class="list-group-item" *ngFor="let data of listTodo; let i= index ">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="col">
+                        <h5 class="mb-0 customheading">{{data.title}}</h5>
+                    </div>
+                    <div class="col">
+                        <p class="mb-0 badge text-bg-{{getPriorityColor(data.priority)}}">Priority: <span>{{data.priority}}</span></p>
+                    </div>
+                    <div class="col">
+                        <span class="badge text-bg-{{getStatusColor(data.status)}}">{{data.status}}</span>
+                    </div>
+                    <div class="col">
+                        <button (click)="remove(i)" class="btn btn-outline-danger">remove</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
