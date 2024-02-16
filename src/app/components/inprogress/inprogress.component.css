@@ -1,0 +1,27 @@
+.custom1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.customaddTodo{
+    text-align: center;
+    margin-top: 60px;
+    text-transform: capitalize;
+}
+.customlisttitle{
+    background-color: #34635c;
+    color: white;
+    text-transform: uppercase;
+}
+label{
+    color: white;
+    text-transform: uppercase
+}
+.custombtn{
+    background-color: rgb(240, 183, 79);
+    margin-left: 190px;
+    color: rgb(233, 62, 32);
+    text-transform: uppercase;
+}
+.custombtnhome button{
+    text-transform: uppercase;
+}

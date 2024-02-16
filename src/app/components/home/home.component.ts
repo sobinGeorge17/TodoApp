@@ -13,31 +13,31 @@ export class HomeComponent implements OnInit{
 
   listTodo:Todo[]= []
 
-getPriorityColor(priority: string): string {
-  switch(priority) {
-    case 'high':
-      return 'danger';
-    case 'moderate':
-      return 'warning';
-    case 'low':
-      return 'success';
-    default:
-      return 'secondary';
-  }
-}
+// getPriorityColor(priority: string): string {
+//   switch(priority) {
+//     case 'high':
+//       return 'danger';
+//     case 'moderate':
+//       return 'warning';
+//     case 'low':
+//       return 'success';
+//     default:
+//       return 'secondary';
+//   }
+// }
 
-getStatusColor(status: string): string {
-  switch(status) {
-    case 'pending':
-      return 'danger';
-    case 'In progress':
-      return 'warning';
-    case 'completed':
-      return 'success';
-    default:
-      return 'secondary';
-  }
-}
+// getStatusColor(status: string): string {
+//   switch(status) {
+//     case 'pending':
+//       return 'danger';
+//     case 'In progress': 
+//       return 'warning';
+//     case 'completed':
+//       return 'success';
+//     default:
+//       return 'secondary';
+//   }
+// }
 
   constructor(private tododService: TodoService) {
 

@@ -8,7 +8,20 @@ export class TodoService {
 
   private todoList:Todo[]=[]
 
+
   constructor() { }
+
+  getpendingList():Todo[]{
+    return this.todoList.filter(data=>data.status ==='pending')
+  }
+  getonProgressList():Todo[]{
+    return this.todoList.filter(data =>data.status==='inprogress')
+
+  }
+  getCompletedTask(){
+    return this.todoList.filter(data => data.status === 'completed')
+  }
+  
 
   getTodoList():Todo[]{
 
@@ -17,7 +30,6 @@ export class TodoService {
   }
 
   addTodoList(todo:Todo){
-
     return this.todoList.push(todo)
   }
 

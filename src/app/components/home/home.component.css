@@ -32,3 +32,6 @@ label{
     color: rgb(233, 62, 32);
     text-transform: uppercase;
 }
+.custombtnhome button{
+    text-transform: uppercase;
+}
